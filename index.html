@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三木尚子 | 自己紹介</title>
+  <meta name="description" content="歯科衛生士・三木尚子の自己紹介ページです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #ffd23f;
+      --yellow-soft: #fff6d6;
+      --orange: #ff8c42;
+      --orange-deep: #e8662a;
+      --cream: #fffbf2;
+      --ink: #3a2e22;
+      --ink-soft: #7a6a58;
+      --green: #6f9a5b;
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Zen Maru Gothic", sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.9;
+      overflow-x: hidden;
+    }
+
+    .en {
+      font-family: "Outfit", sans-serif;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .wrap {
+      width: min(1040px, 100% - 32px);
+      margin-inline: auto;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 251, 242, 0.75);
+    }
+
+    header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .logo {
+      font-family: "Outfit", sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--orange); }
+
+    nav { display: flex; gap: 24px; }
+
+    nav a {
+      font-family: "Outfit", sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--orange); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 120px 0 80px;
+      overflow: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(2px);
+      z-index: 0;
+    }
+
+    .blob.b1 {
+      width: 520px; height: 520px;
+      background: var(--yellow);
+      top: -140px; right: -120px;
+      border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    .blob.b2 {
+      width: 360px; height: 360px;
+      background: var(--orange);
+      bottom: -180px; left: -140px;
+      opacity: 0.85;
+      border-radius: 61% 39% 45% 55% / 52% 60% 40% 48%;
+      animation: float 14s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(20px, 30px) rotate(12deg); }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-text .en {
+      font-size: 0.85rem;
+      color: var(--orange-deep);
+      margin-bottom: 16px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.6rem, 7vw, 4.4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-text .ruby {
+      display: block;
+      font-family: "Outfit", sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      color: var(--ink-soft);
+      margin-top: 8px;
+    }
+
+    .hero-text .role {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 8px 22px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--yellow);
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+    }
+
+    .hero-text .lead {
+      margin-top: 24px;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+    }
+
+    .portrait {
+      justify-self: center;
+      width: min(360px, 80vw);
+      aspect-ratio: 1;
+      border-radius: 50% 50% 46% 54% / 55% 48% 52% 45%;
+      background: linear-gradient(145deg, var(--yellow) 0%, var(--orange) 100%);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 30px 60px -20px rgba(232, 102, 42, 0.45);
+      position: relative;
+    }
+
+    .portrait::after {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border: 2px dashed var(--orange);
+      border-radius: inherit;
+      opacity: 0.5;
+      animation: spin 40s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .portrait .initial {
+      font-family: "Outfit", sans-serif;
+      font-weight: 700;
+      font-size: clamp(4rem, 14vw, 7rem);
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: var(--ink-soft);
+      z-index: 1;
+    }
+
+    .scroll::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 40px;
+      margin: 8px auto 0;
+      background: var(--ink-soft);
+      animation: drop 2s ease-in-out infinite;
+      transform-origin: top;
+    }
+
+    @keyframes drop {
+      0% { transform: scaleY(0); }
+      50% { transform: scaleY(1); }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 110px 0; }
+
+    .sec-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .sec-title .en {
+      font-size: 0.8rem;
+      color: var(--orange-deep);
+    }
+
+    .sec-title h2 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      letter-spacing: 0.1em;
+      margin-top: 6px;
+    }
+
+    .sec-title h2::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 6px;
+      margin: 18px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--yellow), var(--orange));
+    }
+
+    /* About */
+    .about { background: var(--yellow-soft); }
+
+    .about-card {
+      max-width: 720px;
+      margin-inline: auto;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: clamp(32px, 6vw, 56px);
+      box-shadow: 0 20px 50px -30px rgba(58, 46, 34, 0.35);
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .about-card p + p { margin-top: 1.2em; }
+
+    .about-card strong {
+      background: linear-gradient(transparent 60%, var(--yellow) 60%);
+      font-weight: 700;
+    }
+
+    /* Profile table */
+    .profile-list {
+      max-width: 720px;
+      margin: 48px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .profile-item {
+      background: #fff;
+      border-radius: 20px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    .profile-item dt {
+      font-family: "Outfit", sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--orange-deep);
+    }
+
+    .profile-item dd {
+      margin-top: 4px;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    /* Favorites */
+    .fav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .fav-card {
+      position: relative;
+      border-radius: var(--radius);
+      padding: 44px 36px 40px;
+      overflow: hidden;
+      color: var(--ink);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .fav-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 40px -24px rgba(58, 46, 34, 0.4);
+    }
+
+    .fav-card.camp { background: linear-gradient(160deg, #ffe08a 0%, var(--orange) 130%); }
+    .fav-card.plant { background: linear-gradient(160deg, var(--yellow-soft) 0%, #ffd23f 140%); }
+
+    .fav-icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+    }
+
+    .fav-icon svg { width: 40px; height: 40px; }
+
+    .fav-card .en {
+      font-size: 0.75rem;
+      opacity: 0.75;
+    }
+
+    .fav-card h3 {
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      margin: 2px 0 14px;
+    }
+
+    .fav-card .deco {
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      width: 160px;
+      height: 160px;
+      opacity: 0.18;
+    }
+
+    /* Message */
+    .message {
+      background: var(--ink);
+      color: var(--cream);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .message .sec-title h2 { color: var(--cream); }
+    .message .sec-title .en { color: var(--yellow); }
+
+    .message p {
+      max-width: 620px;
+      margin-inline: auto;
+      font-size: 1.1rem;
+    }
+
+    .message .sign {
+      margin-top: 36px;
+      font-size: 1.2rem;
+      color: var(--yellow);
+      letter-spacing: 0.15em;
+    }
+
+    .message::before,
+    .message::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+    }
+
+    .message::before {
+      width: 300px; height: 300px;
+      background: var(--yellow);
+      top: -120px; left: -80px;
+    }
+
+    .message::after {
+      width: 240px; height: 240px;
+      background: var(--orange);
+      bottom: -100px; right: -60px;
+    }
+
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      font-family: "Outfit", sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--ink-soft);
+    }
+
+    /* Fade-in */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 760px) {
+      nav { display: none; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .portrait { order: -1; width: min(240px, 64vw); }
+
+      .blob.b1 { width: 320px; height: 320px; }
+      .blob.b2 { width: 220px; height: 220px; }
+
+      section { padding: 80px 0; }
+
+      .fav-grid { grid-template-columns: 1fr; }
+
+      .profile-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a href="#" class="logo">Naoko <span>Miki</span></a>
+      <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#favorite">FAVORITE</a>
+        <a href="#message">MESSAGE</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="en">Hello, nice to meet you!</p>
+        <h1>
+          三木 尚子
+          <span class="ruby">NAOKO MIKI</span>
+        </h1>
+        <span class="role">歯科衛生士</span>
+        <p class="lead">
+          「三木さん」と気軽に呼んでください。<br>
+          いつでも話しかけてもらえたらうれしいです。
+        </p>
+      </div>
+
+      <div class="portrait" aria-hidden="true">
+        <span class="initial">N.M</span>
+      </div>
+    </div>
+
+    <div class="scroll en">Scroll</div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="sec-title reveal">
+        <p class="en">About me</p>
+        <h2>わたしについて</h2>
+      </div>
+
+      <div class="about-card reveal">
+        <p>
+          はじめまして、歯科衛生士の<strong>三木尚子</strong>です。
+        </p>
+        <p>
+          まわりからは<strong>「話しやすい」</strong>と言ってもらえることが多いです。<br>
+          仕事のことはもちろん、ちょっとした雑談も大歓迎。<br>
+          困ったことや気になることがあれば、気軽に声をかけてくださいね。
+        </p>
+      </div>
+
+      <dl class="profile-list reveal">
+        <div class="profile-item">
+          <dt>NAME</dt>
+          <dd>三木 尚子</dd>
+        </div>
+        <div class="profile-item">
+          <dt>JOB</dt>
+          <dd>歯科衛生士</dd>
+        </div>
+        <div class="profile-item">
+          <dt>CALL ME</dt>
+          <dd>三木さん</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Favorite -->
+  <section id="favorite">
+    <div class="wrap">
+      <div class="sec-title reveal">
+        <p class="en">Favorite</p>
+        <h2>好きなこと</h2>
+      </div>
+
+      <div class="fav-grid">
+        <article class="fav-card camp reveal">
+          <div class="fav-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#e8662a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 8 6 40h36L24 8Z"/>
+              <path d="M24 8v32"/>
+              <path d="M24 40l-6-12"/>
+              <path d="M24 40l6-12"/>
+              <path d="M2 40h44"/>
+            </svg>
+          </div>
+          <p class="en">Camping</p>
+          <h3>キャンプ</h3>
+          <p>
+            自然の中で過ごす時間が大好きです。<br>
+            焚き火を眺めたり、外で食べるごはんは格別。<br>
+            おすすめのキャンプ場があったらぜひ教えてください！
+          </p>
+          <svg class="deco" viewBox="0 0 48 48" fill="#3a2e22">
+            <path d="M24 8 6 40h36L24 8Z"/>
+          </svg>
+        </article>
+
+        <article class="fav-card plant reveal">
+          <div class="fav-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#6f9a5b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 30h20l-3 14H17l-3-14Z"/>
+              <path d="M24 30V16"/>
+              <path d="M24 20c0-7 5-12 13-12 0 8-5 13-13 12Z"/>
+              <path d="M24 24c0-6-4-10-11-10 0 7 4 11 11 10Z"/>
+            </svg>
+          </div>
+          <p class="en">Plants</p>
+          <h3>観葉植物</h3>
+          <p>
+            おうちで観葉植物を育てています。<br>
+            新しい葉っぱが出てくると、それだけで一日ごきげんに。<br>
+            植物好きさん、育て方の話をしましょう！
+          </p>
+          <svg class="deco" viewBox="0 0 48 48" fill="#3a2e22">
+            <path d="M24 30c0-12 6-20 18-20 0 13-7 21-18 20Z"/>
+            <path d="M24 34c0-10-6-16-16-16 0 11 6 17 16 16Z"/>
+          </svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message -->
+  <section class="message" id="message">
+    <div class="wrap">
+      <div class="sec-title reveal">
+        <p class="en">Message</p>
+        <h2>みなさんへ</h2>
+      </div>
+      <p class="reveal">
+        一緒に働くみなさんと、気持ちよく笑顔で過ごせる職場にしていきたいと思っています。<br>
+        キャンプや植物の話でも、なんでもない話でも、<br>
+        どうぞ気軽に話しかけてください。<br>
+        これからよろしくお願いします！
+      </p>
+      <p class="sign reveal">三木 尚子</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; Naoko Miki
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
