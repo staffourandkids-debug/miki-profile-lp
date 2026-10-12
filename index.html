@@ -286,8 +286,8 @@
       max-width: 720px;
       margin: 48px auto 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
     }
 
     .profile-item {
@@ -357,6 +357,25 @@
       margin: 2px 0 14px;
     }
 
+    .tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tags li {
+      padding: 4px 14px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--green);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
     .fav-card .deco {
       position: absolute;
       right: -30px;
@@ -379,7 +398,7 @@
     .message .sec-title .en { color: var(--yellow); }
 
     .message p {
-      max-width: 620px;
+      max-width: 680px;
       margin-inline: auto;
       font-size: 1.1rem;
     }
@@ -456,7 +475,10 @@
 
       .fav-grid { grid-template-columns: 1fr; }
 
-      .profile-list { grid-template-columns: 1fr; }
+      .about-card br, .fav-card p br, .message p br { display: none; }
+
+      .profile-list { grid-template-columns: repeat(2, 1fr); }
+      .profile-item:first-child { grid-column: 1 / -1; }
     }
   </style>
 </head>
@@ -485,7 +507,7 @@
           三木 尚子
           <span class="ruby">NAOKO MIKI</span>
         </h1>
-        <span class="role">歯科衛生士</span>
+        <span class="role">歯科衛生士 13年目</span>
         <p class="lead">
           「三木さん」と気軽に呼んでください。<br>
           いつでも話しかけてもらえたらうれしいです。
@@ -513,6 +535,10 @@
           はじめまして、歯科衛生士の<strong>三木尚子</strong>です。
         </p>
         <p>
+          歯科衛生士になって<strong>13年目</strong>。<br>
+          患者さんの気持ちに寄り添えるよう、日々つとめています。
+        </p>
+        <p>
           まわりからは<strong>「話しやすい」</strong>と言ってもらえることが多いです。<br>
           仕事のことはもちろん、ちょっとした雑談も大歓迎。<br>
           困ったことや気になることがあれば、気軽に声をかけてくださいね。
@@ -529,8 +555,16 @@
           <dd>歯科衛生士</dd>
         </div>
         <div class="profile-item">
+          <dt>CAREER</dt>
+          <dd>13年目</dd>
+        </div>
+        <div class="profile-item">
           <dt>CALL ME</dt>
           <dd>三木さん</dd>
+        </div>
+        <div class="profile-item">
+          <dt>FAMILY</dt>
+          <dd>夫・娘・息子</dd>
         </div>
       </dl>
     </div>
@@ -558,8 +592,9 @@
           <p class="en">Camping</p>
           <h3>キャンプ</h3>
           <p>
-            自然の中で過ごす時間が大好きです。<br>
-            焚き火を眺めたり、外で食べるごはんは格別。<br>
+            旦那さん、中学1年生の娘、小学4年生の息子と<br>
+            家族4人でキャンプに出かけるのが楽しみです。<br>
+            自然の中で過ごす時間と、外で食べるごはんは格別。<br>
             おすすめのキャンプ場があったらぜひ教えてください！
           </p>
           <svg class="deco" viewBox="0 0 48 48" fill="#3a2e22">
@@ -583,6 +618,12 @@
             新しい葉っぱが出てくると、それだけで一日ごきげんに。<br>
             植物好きさん、育て方の話をしましょう！
           </p>
+          <ul class="tags">
+            <li>ガジュマル</li>
+            <li>とっくりラン</li>
+            <li>ベンジャミン</li>
+            <li>コーヒーの木</li>
+          </ul>
           <svg class="deco" viewBox="0 0 48 48" fill="#3a2e22">
             <path d="M24 30c0-12 6-20 18-20 0 13-7 21-18 20Z"/>
             <path d="M24 34c0-10-6-16-16-16 0 11 6 17 16 16Z"/>
@@ -600,7 +641,8 @@
         <h2>みなさんへ</h2>
       </div>
       <p class="reveal">
-        一緒に働くみなさんと、気持ちよく笑顔で過ごせる職場にしていきたいと思っています。<br>
+        患者さんにも、一緒に働くみなさんにも寄り添える存在でいたいと思っています。<br>
+        気持ちよく笑顔で過ごせる職場を、一緒につくっていけたらうれしいです。<br>
         キャンプや植物の話でも、なんでもない話でも、<br>
         どうぞ気軽に話しかけてください。<br>
         これからよろしくお願いします！
